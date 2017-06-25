@@ -1,6 +1,6 @@
 import React from 'react';
 import CreateTodo from './create-todo';
-import TodosList from './Todos-list';
+import TodosList from './todos-list';
 
 const todos = [
 {

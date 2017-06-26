@@ -1,16 +1,16 @@
-import React from 'react';
-import CreateTodo from './create-todo';
-import TodosList from './todos-list';
+import React from "react";
+import CreateTodo from "./create-todo";
+import TodosList from "./todos-list";
 
 const todos = [
-{
-  task: 'Create an app',
-  isCompleted: false
-},
-{
-  task: 'Eat Cake',
-  isCompleted: true
-}
+  {
+    task: "Create an app",
+    isCompleted: false
+  },
+  {
+    task: "Eat Cake",
+    isCompleted: true
+  }
 ];
 
 export default class App extends React.Component {
@@ -19,14 +19,17 @@ export default class App extends React.Component {
 
     this.state = {
       todos
-    }
+    };
   }
 
   render() {
     return (
       <div>
         <h1>React Todo</h1>
-        <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)} />
+        <CreateTodo
+          todos={this.state.todos}
+          createTask={this.createTask.bind(this)}
+        />
         <TodosList
           todos={this.state.todos}
           toggleTask={this.toggleTask.bind(this)}
